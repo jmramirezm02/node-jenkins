@@ -8,7 +8,7 @@ describe('Validations for helper functions', () => {
     });
 
    it('Should return true when data is presented', () => {
-       const isNull = Helpers.notNull('Hola amigo');
-       assert.equal(isNull, true);
+       const result = Helpers.notNull('Hola amigo');
+       assert.equal(result, true);
    })
 });
