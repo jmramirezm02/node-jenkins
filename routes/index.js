@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
+const path = require('path');
+const rootPath = path.normalize(__dirname + '/../');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+module.exports = app => {
+    app.get('/', function(req, res, next) {
+         res.sendFile(rootPath + 'public/index.html');
+    });
+};
